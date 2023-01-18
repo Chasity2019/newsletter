@@ -33,7 +33,7 @@ const data = {
 
 const jsonData = JSON.stringify(data);
 
-const url = "https://us13.api.mailchimp.com/3.0/lists/" + listId;
+const url = listIdUrl;
 
 const options = {
     method: "POST",
