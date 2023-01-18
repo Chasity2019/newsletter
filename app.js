@@ -35,11 +35,11 @@ const data = {
 
 const jsonData = JSON.stringify(data);
 
-const url = config.listIdUrl;
+const url = audiencekey;
 
 const options = {
     method: "POST",
-    auth: "chasity1:" + config.apiKey
+    auth: "chasity1:" + mykey
 }
 
 const request = https.request(url, options, function(response){
