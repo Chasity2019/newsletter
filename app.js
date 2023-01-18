@@ -12,6 +12,8 @@ app.get("/", function(req, res){
     res.sendFile(__dirname + "/signup.html");
 });
 
+
+
 app.post("/", function(req, res){
 
 const firstName = req.body.fName;
@@ -33,11 +35,11 @@ const data = {
 
 const jsonData = JSON.stringify(data);
 
-const url = listIdUrl;
+const url = config.listIdUrl;
 
 const options = {
     method: "POST",
-    auth: "chasity1:" + apiKey
+    auth: "chasity1:" + config.apiKey
 }
 
 const request = https.request(url, options, function(response){
